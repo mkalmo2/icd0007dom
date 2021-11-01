@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><body>
+
+This <a href="" id="l1">link</a> causes browser to hang.
+
+<script>
+
+    let div = document.getElementById('l1');
+    div.onmouseover = function (e) {
+        div.style.color = 'red';
+    };
+    div.onmouseout = function (e) {
+        div.style.color = 'blue';
+    };
+    div.onclick = function (e) {
+        e.preventDefault();
+        doHardWork()
+        console.log('Done!');
+    };
+
+    function doHardWork() {
+        let i = Math.pow(2, 30) * 3;
+        while (i--) {}
+    }
+
+
+</script>
+</body></html>

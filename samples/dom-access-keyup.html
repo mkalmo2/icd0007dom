@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><body>
+
+Value from input box: <span id="display"></span>
+
+<br><br>
+
+<input id="input-box" onkeyup="updateDisplay()">
+
+<script>
+    let display = document.getElementById("display");
+    let input = document.getElementById("input-box");
+
+    function updateDisplay() {
+        display.innerText = input.value;
+    }
+</script>
+
+</body></html>

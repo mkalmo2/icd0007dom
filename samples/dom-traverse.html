@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><body>
+
+<div>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+</div>
+
+<script>
+
+    traverse(document);
+
+    function traverse(root, level = 0) {
+        for (let child of root.children) {
+            console.log(' '.repeat(level * 4) + child.nodeName);
+            traverse(child, level + 1);
+        }
+    }
+
+</script>
+
+</body></html>
