@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><body><script>
+
+    let listUrl = 'https://restcountries.com/v2/alpha/ee/?fields=name';
+
+    let promise = fetch(listUrl);
+
+    console.log('fetch promise: ', promise);
+
+    promise.then(response => {
+        console.log('response: ', response);
+        console.log('json: ', response.json());
+    });
+
+</script></body></html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><body><script>
+
+    let listUrl = 'https://restcountries.com/v2/alpha/ee/?fields=name';
+
+    let firstPromise = fetch(listUrl);
+
+    console.log('firstPromise: ', firstPromise);
+
+    let secondPromise = firstPromise.then(response => {
+        console.log('firstPromise: ', firstPromise);
+        let jsonPromise = response.json();
+        console.log('jsonPromise: ', jsonPromise);
+        return jsonPromise;
+    });
+
+    let thirdPromise = secondPromise.then(json => {
+        console.log('json: ', json);
+    });
+
+
+</script></body></html>

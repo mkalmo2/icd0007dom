@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><body><script>
+
+    let listUrl = 'https://restcountries.com/v2/alpha/ee/?fields=name';
+
+    getJson(listUrl, function (data) {
+        console.log(data);
+    });
+
+    function getJson(url, callback) {
+        fetch(url)
+            .then(response => response.json())
+            .then(callback);
+    }
+
+</script></body></html>
