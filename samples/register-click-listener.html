@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><body>
+
+<span id="display"></span>
+
+<br><br>
+
+<button id="button1">Say hello!</button>
+
+<script type="module">
+
+    let display = document.getElementById("display");
+    let button = document.getElementById("button1");
+
+    button.addEventListener('click',
+        e => display.innerText = 'Hello!');
+
+</script>
+
+
+</body></html>
