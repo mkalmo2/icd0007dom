@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Load data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<table id="table"></table>
+
+<script type="module">
+
+    const table = document.getElementById('table');
+
+    const numbers = [1, 2, 3];
+
+    for (const number of numbers) {
+        addRow(number);
+    }
+
+    function addRow(contents) {
+        const row = document.createElement('tr');
+
+        const td = document.createElement('td');
+        td.innerText = contents;
+
+        row.appendChild(td);
+
+        table.appendChild(row);
+    }
+
+
+</script>
+
+</body>
+</html>

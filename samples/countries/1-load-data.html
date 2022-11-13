@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Load data</title>
+</head>
+<body>
+<script type="module">
+
+    fetch('countries-short.json')
+        .then(r => r.json())
+        .then(data => {
+            console.table(data.slice(0, 5), ['name', 'capital', 'region', 'area']);
+        });
+
+</script>
+
+</body>
+</html>

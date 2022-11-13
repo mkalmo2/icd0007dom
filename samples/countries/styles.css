@@ -1,0 +1,39 @@
+main {
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    column-gap: 2rem;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table td {
+    border: 1px solid gray;
+}
+
+#table > tr td:first-child {
+    width: 65%;
+}
+
+#selectedCountry {
+    display: none;
+}
+
+select {
+    margin-left: 1rem;
+}
+
+#cleanSearchIcon {
+    cursor: pointer;
+}
+
+img {
+    width: 200px;
+    border: 1px solid gray;
+}
+
+tr:hover {
+    background-color: beige;
+}

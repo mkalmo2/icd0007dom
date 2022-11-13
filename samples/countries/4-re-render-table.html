@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Re-render table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<table id="table"></table>
+
+<script type="module">
+
+    const table = document.getElementById('table');
+
+    renderTable([1, 2, 3, 4, 5]);
+
+    renderTable([1, 3, 5]);
+
+    function renderTable(data) {
+        for (const each of data) {
+            addRow(each);
+        }
+    }
+
+    function addRow(contents) {
+        const row = document.createElement('tr');
+
+        const td = document.createElement('td');
+        td.innerText = contents;
+
+        row.appendChild(td);
+
+        table.appendChild(row);
+    }
+
+    function removeChildren(node) {
+        while (node.hasChildNodes()) {
+            node.removeChild(node.lastChild);
+        }
+    }
+
+</script>
+
+</body>
+</html>
