@@ -6,7 +6,7 @@
 <body>
 <script type="module">
 
-    fetch('countries-short.json')
+    fetch('data.json')
         .then(r => r.json())
         .then(data => {
             console.table(data.slice(0, 5), ['name', 'capital', 'region', 'area']);
