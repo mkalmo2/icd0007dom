@@ -12,9 +12,14 @@
 
     const table = document.getElementById('table');
 
-    renderTable([1, 2, 3, 4, 5]);
+    let countries = ["Afghanistan", "Albania", "Algeria"];
 
-    renderTable([1, 3, 5]);
+    renderTable(countries);
+
+    // user types string "Al"
+
+    // countries = countries.filter(n => n.includes("Al"));
+    // renderTable(countries);
 
     function renderTable(data) {
         for (const each of data) {
@@ -23,11 +28,10 @@
     }
 
     function addRow(contents) {
-        const row = document.createElement('tr');
-
         const td = document.createElement('td');
         td.innerText = contents;
 
+        const row = document.createElement('tr');
         row.appendChild(td);
 
         table.appendChild(row);

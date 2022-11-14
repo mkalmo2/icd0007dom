@@ -12,7 +12,7 @@
 
     const table = document.getElementById('table');
 
-    renderTable([1, 2, 3, 4, 5]);
+    renderTable(["Afghanistan", "Albania", "Algeria"]);
 
     function renderTable(data) {
         for (const each of data) {
@@ -21,11 +21,10 @@
     }
 
     function addRow(contents) {
-        const row = document.createElement('tr');
-
         const td = document.createElement('td');
         td.innerText = contents;
 
+        const row = document.createElement('tr');
         row.appendChild(td);
 
         row.onclick = function () {

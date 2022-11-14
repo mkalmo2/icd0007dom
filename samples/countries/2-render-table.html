@@ -12,23 +12,21 @@
 
     const table = document.getElementById('table');
 
-    const numbers = [1, 2, 3];
+    const numbers = ["Afghanistan", "Albania", "Algeria"];
 
     for (const number of numbers) {
         addRow(number);
     }
 
     function addRow(contents) {
-        const row = document.createElement('tr');
-
         const td = document.createElement('td');
         td.innerText = contents;
 
+        const row = document.createElement('tr');
         row.appendChild(td);
 
         table.appendChild(row);
     }
-
 
 </script>
 
