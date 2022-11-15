@@ -10,28 +10,27 @@ createRegionSelect(allCountries);
 renderTable(allCountries);
 
 searchBox.addEventListener('keyup', () => {
-    const filtered = allCountries.filter(c => includes(c.name, searchBox.value));
-
-    renderTable(filtered);
+    renderTable(filterByInputs(allCountries));
 });
 
 regionSelect.addEventListener('change', () => {
-
-    searchBox.value = '';
-
-    const region = regionSelect.value;
-
-    const filtered = allCountries
-        .filter(c => region === '' || includes(region, c.region));
-
-    renderTable(filtered);
+    renderTable(filterByInputs(allCountries));
 });
+
+function filterByInputs(countries) {
+    const region = regionSelect.value;
+    const searchString = searchBox.value;
+
+    return countries
+        .filter(c => includes(c.name, searchString))
+        .filter(c => region === '' || includes(region, c.region));
+}
 
 cleanSearchIcon.addEventListener('click', () => {
 
     searchBox.value = '';
 
-    renderTable(allCountries);
+    renderTable(filterByInputs(allCountries));
 });
 
 function displayDetails(country) {
