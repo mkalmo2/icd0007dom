@@ -23,6 +23,8 @@
     renderTable(countries);
 
     function renderTable(data) {
+        // table.replaceChildren();
+
         for (const each of data) {
             addRow(each);
         }
@@ -36,12 +38,6 @@
         row.appendChild(td);
 
         table.appendChild(row);
-    }
-
-    function removeChildren(node) {
-        while (node.hasChildNodes()) {
-            node.removeChild(node.lastChild);
-        }
     }
 
 </script>
