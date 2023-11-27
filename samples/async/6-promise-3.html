@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head></head><body><script type="module">
+
+    const url = 'https://enos.itcollege.ee/~makalm/icd0007/foorum/api.php'
+              + '?username=mkalmo&cmd=find-posts';
+
+    fetch(url)
+        .then(response => response.json())
+        .then(json => console.log(json[0]))
+        .catch(error => console.log('Viga: ', error.message));
+
+    console.log('End');
+
+</script></body></html>
