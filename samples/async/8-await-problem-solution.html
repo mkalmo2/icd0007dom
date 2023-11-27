@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head></head><body><script type="module">
+
+    const url = 'https://enos.itcollege.ee/~makalm/icd0007/foorum/api.php'
+              + '?username=mkalmo&cmd=find-posts';
+
+
+    await main();
+
+    console.log('End');
+
+    async function main() {
+        const result = await fetch(url);
+
+        console.log(result.status); // 200
+    }
+
+
+</script></body></html>
