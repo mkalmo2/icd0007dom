@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1",
+    "firstName": "Daisy",
+    "lastName": "Smith",
+    "position": "position.manager",
+    "profilePicture": "../img/pic1.jpg",
+    "tasks": [
+      {
+        "id": "3",
+        "description": "Menu thumbnails disappear when I click on profile page.",
+        "estimate": 0,
+        "isCompleted": true,
+        "employeeId": "1"
+      },
+      {
+        "id": "1",
+        "description": "Prevent clearing CSS added to node after filterByAll() in datatable filter",
+        "estimate": 0,
+        "isCompleted": false,
+        "employeeId": "1"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "firstName": "James",
+    "lastName": "Adams",
+    "position": "position.designer",
+    "profilePicture": "../img/pic2.jpg",
+    "tasks": [
+      {
+        "id": "475",
+        "description": "test1",
+        "estimate": 0,
+        "isCompleted": false,
+        "employeeId": "2"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "firstName": "Mary",
+    "lastName": "Brown",
+    "position": "position.developer",
+    "profilePicture": "../img/pic3.jpg",
+    "tasks": []
+  }
+]

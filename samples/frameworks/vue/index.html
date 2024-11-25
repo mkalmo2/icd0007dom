@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>icd0007 Sample Application</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/form.css">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="../functions.js"></script>
+
+</head>
+<body id="employee-list-page">
+
+<div id="root">
+
+    <nav>
+        <a href="?cmd=dashboard" id="dashboard-link">Dashboard</a> |
+        <a href="?cmd=employee-list" id="employee-list-link">Employees</a> |
+        <a href="?cmd=employee-form" id="employee-form-link">Add Employee</a> |
+        <a href="?cmd=task-list" id="task-list-link">Tasks</a> |
+        <a href="?cmd=task-form" id="task-form-link">Add Task</a>
+    </nav>
+
+    <main>
+
+        <div class="content-card">
+            <div class="content-card-header">Employees</div>
+            <div class="content-card-content">
+
+                <div class="employee-item" v-for="employee in employees">
+                    <img :src="employee.profilePicture"
+                         alt="profile picture"/>
+                    <span class="name"
+                    >{{ employee.firstName }} {{ employee.lastName }}</span>
+                    <span class="link"><a href="">Edit</a></span>
+                    <br><span class="position">{{ classifier(employee.position) }}</span>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        icd0007 Sample Application
+    </footer>
+
+</div>
+
+<script>
+    const { createApp } = Vue;
+
+    createApp({
+        data() {
+            return {
+                employees: []
+            };
+        },
+
+        async created() {
+            this.employees = await (await fetch("../employees.json")).json();
+        },
+
+        methods: {
+            classifier: classifier
+        }
+
+    }).mount('#root');
+
+</script>
+
+</body>
+</html>
