@@ -6,11 +6,10 @@
 <body>
 <script type="module">
 
-    fetch('data.json')
-        .then(r => r.json())
-        .then(data => {
-            console.table(data.slice(0, 5), ['name', 'capital', 'region', 'area']);
-        });
+    const data = await (await fetch('data.json')).json();
+
+    console.table(data.slice(0, 5),
+        ['name', 'capital', 'region', 'area']);
 
 </script>
 
