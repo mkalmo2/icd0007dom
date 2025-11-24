@@ -20,40 +20,41 @@ Brauser ja DOM
    Atribuudi väärtuse saate funktsiooniga element.getAttribute(\<atribuudi nimi\>).<br>
    Elemendi värvi saate muuta nii: element.style.color = \<värvi nimi\>.<br>
 
-4 a) Kirjutage funktsioon render(), mis teeb iga items listi kirje kohta 
+4.<br> 
+  a) Kirjutage funktsioon render(), mis teeb iga items listi kirje kohta 
      ühe LI elemendi. Kasutada on funktsioon addLi(), mis võtab argumendiks 
      item-i, teeb DOM elemendi ja lisab selle UL elemendi alla.<br><br>
     
   b) Kirjutage funktsioon addItem(), mis lisab items listi uue kirje.<br>
     
-     Pärast kirje lisamist kutsuge välja funktsioon render() vaate uuendamiseks.<br>
+  Pärast kirje lisamist kutsuge välja funktsioon render() vaate uuendamiseks.<br>
      
-     Topelt kirjete vältimiseks lisage funktsioonile render() järgmine kood:<br>
-     
-        ```ul.replaceChildren();```
-        
-     Argumendina saab määrata, millega olemasolevad alamsõlmed asendada.<br>
-     Kui argumente pole, siis on tulemuseks kustutamine.<br><br>
+  Topelt kirjete vältimiseks lisage funktsioonile render() järgmine kood:<br>
+ 
+  ```ul.replaceChildren();```
+    
+  Argumendina saab määrata, millega olemasolevad alamsõlmed asendada.<br>
+  Kui argumente pole, siis on tulemuseks kustutamine.<br><br>
 
   c) Lisage nupule kood, mis võtab input kasti väärtuse ja lisab listi 
-     uue item-i.<br><br>
+  uue item-i.<br><br>
 
-     Näide on failis samples/register-click-listener.html.<br>
+  Näide on failis samples/register-click-listener.html.<br>
 
   d) Kirjutage funktsioon deleteItem(), mis võtab sisse id ja kustutab 
-     items list-ist vastava id-ga elemendi ja värskendab vaadet (render()).
-     Elemendi saab mugavalt eemaldada filtreerides listi tingimusega: each.id !== id <br><br>
+  items list-ist vastava id-ga elemendi ja värskendab vaadet (render()).
+  Elemendi saab mugavalt eemaldada filtreerides listi tingimusega: each.id !== id <br><br>
 
   e) Lisage iga LI elemendi juurde kustutamise nupp. Selleks peate lisama addLi()
-     funktsioonile järgmise koodi:
+  funktsioonile järgmise koodi:
      
-     ```
-     const b = document.createElement('button');
-     b.innerText = 'X';
-     b.onclick = function () {
-         deleteItem(item.id);
-     };
-     li.appendChild(b);
-     ```
+  ```
+  const b = document.createElement('button');
+  b.innerText = 'X';
+  b.onclick = function () {
+      deleteItem(item.id);
+  };
+  li.appendChild(b);
+  ```
 
 Seletused ja lahendused: https://youtu.be/mnbjpjO_pUI
